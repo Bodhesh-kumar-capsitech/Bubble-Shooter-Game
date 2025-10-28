@@ -14,7 +14,6 @@ public class BubbleThrow : MonoBehaviour
     public bool isvalidprefab = false;
     public bool isshoot = false;
     public static BubbleThrow instance;
-    public GameObject throwmusic;
 
     private void Awake()
     {

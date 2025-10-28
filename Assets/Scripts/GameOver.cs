@@ -31,7 +31,7 @@ public class GameOver : MonoBehaviour
     {
         Vector3 mousepos = Input.mousePosition;
 
-        if(ScoreManager.Instance.Score > 3000)
+        if(ScoreManager.Instance.Score >= 3000)
         {
             won.gameObject.SetActive(true);
             BubbleCollisionHandler.Instance.DestroyAllBubble();
@@ -46,6 +46,7 @@ public class GameOver : MonoBehaviour
 
     public void OnGameover()
     {
+        BubbleCollisionHandler.Instance.DestroyAllBubble();
         isGameActive = false;
         text.gameObject.SetActive(true);
         gameoverpannel.SetActive(true);
@@ -56,8 +57,6 @@ public class GameOver : MonoBehaviour
         Trajectoryline.SetActive(false);
         Scorepannel.SetActive(false);
         Score.SetActive(false);
-        BubbleCollisionHandler.Instance.DestroyAllBubble();
-       
     }
 
     public void Pause()

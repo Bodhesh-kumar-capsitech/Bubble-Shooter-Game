@@ -250,6 +250,19 @@ public class BubbleCollisionHandler : MonoBehaviour
 
     }
 
+    public void DestroyAllBubble()
+    {
+        GameObject[] allBubbles = GameObject.FindGameObjectsWithTag("Bubble");
+        foreach (var item in allBubbles)
+        {
+            Destroy(item);
+        }
+
+        GameObject spawnbubble = GameObject.FindGameObjectWithTag("ActiveBubble");
+        Destroy(spawnbubble);
+
+    }
+
     void OnDrawGizmos()
 
     {
@@ -266,18 +279,7 @@ public class BubbleCollisionHandler : MonoBehaviour
 
     }
 
-    public void DestroyAllBubble()
-    {
-        GameObject[] allBubbles = GameObject.FindGameObjectsWithTag("Bubble");
-        foreach (var item in allBubbles)
-        {
-            Destroy(item);
-        }
-
-        GameObject spawnbubble = GameObject.FindGameObjectWithTag("ActiveBubble");
-        Destroy(spawnbubble);
-
-    }
+   
 
 
 
