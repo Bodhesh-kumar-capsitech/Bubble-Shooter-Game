@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private AudioSource audioSource;
     public AudioClip background;
     public AudioClip throwsound;
@@ -28,12 +27,6 @@ public class AudioPlayer : MonoBehaviour
         audioSource.loop = true;
         audioSource.volume = 0.8f;
         audioSource.Play();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 
