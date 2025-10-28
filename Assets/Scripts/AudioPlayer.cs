@@ -26,7 +26,7 @@ public class AudioPlayer : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = background;
         audioSource.loop = true;
-        audioSource.volume = 0.4f;
+        audioSource.volume = 0.8f;
         audioSource.Play();
 
     }

@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
     void Moveobject()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             ismoving = true;
 
