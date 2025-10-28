@@ -72,7 +72,7 @@ public class BubbleCollisionHandler : MonoBehaviour
         if (collision.gameObject.CompareTag("Left Wall"))
         {
             wallCollisionCount++;
-            Debug.Log($"Wall collision count: {wallCollisionCount}");
+            Debug.Log("Wall collision count is: " + wallCollisionCount);
 
             if (wallCollisionCount > MaxWallCollision)
             {
@@ -93,8 +93,8 @@ public class BubbleCollisionHandler : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
             rb.mass = 0f;
-            rb.Sleep();
             rb.bodyType = RigidbodyType2D.Static;
+            rb.Sleep();
             playerController.isprojectilecolided = true;
         }
 
@@ -115,7 +115,7 @@ public class BubbleCollisionHandler : MonoBehaviour
                 effectObject.GetComponent<ParticleSystem>().Play();
                 Destroy(b);
                 AudioPlayer.player.OnDestroySound();
-                Debug.Log("Cluster count is:" + cluster.Count);
+                Debug.Log("Cluster count is: " + cluster.Count);
 
                 spawn.bubbleDestroyed = true;
                 spawn.missedShotsCount = 0;
@@ -264,7 +264,6 @@ public class BubbleCollisionHandler : MonoBehaviour
     }
 
     void OnDrawGizmos()
-
     {
 
         if (tempg != null)

@@ -83,6 +83,7 @@ public class BubbleThrow : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         AudioPlayer.player.OnThrowSound();
         rb.AddForce(direction * speed , ForceMode2D.Impulse);
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         _bubbleGroup.OnPlayerShot();
     }
 
