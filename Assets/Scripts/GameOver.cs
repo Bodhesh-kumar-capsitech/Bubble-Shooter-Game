@@ -55,8 +55,8 @@ public class GameOver : MonoBehaviour
         play.gameObject.SetActive(false);
         pause.gameObject.SetActive(false);
         Trajectoryline.SetActive(false);
-        Scorepannel.SetActive(false);
-        Score.SetActive(false);
+        Scorepannel.SetActive(true);
+        Score.SetActive(true);
     }
 
     public void Pause()
